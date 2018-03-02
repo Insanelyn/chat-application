@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a1212b0-d1c9-48a1-b848-237460645f25" name="Default" comment="added background images and a images directory">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/pagestyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.html" afterPath="$PROJECT_DIR$/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/register.html" afterPath="$PROJECT_DIR$/views/register.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -203,7 +200,7 @@
       <updated>1519976802697</updated>
       <workItem from="1519976805813" duration="2325000" />
       <workItem from="1519982315912" duration="1743000" />
-      <workItem from="1519984631051" duration="499000" />
+      <workItem from="1519984631051" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="added background images and a images directory">
       <created>1519983556751</created>
@@ -216,7 +213,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4567000" />
+    <option name="totallyTimeSpent" value="5250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
