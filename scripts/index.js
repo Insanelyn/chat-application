@@ -1,5 +1,3 @@
-
-
 let db = firebase.database();
 
 let message = document.getElementById("message");
