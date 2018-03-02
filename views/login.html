@@ -13,19 +13,33 @@
     <script src="js/bootstrap.min.js" rel="script"></script>
 </head>
 <body>
-<h3>Login using email and password</h3>
-<form>
-    <label for="email">Email</label>
-    <input id="email" type="text">
-    <label for="password">Password</label>
-    <input id="password" type="password">
-    <button id="login-email-password">Login using email and password</button>
-</form>
+<h2>Login</h2>
+
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+
+                <button id="login-email-password">Login</button>
+            </form>
+
+
+
+
+
 <h3>Google login</h3>
 <button id="google-login">Google login</button>
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script src="../scripts/firebaseApp.js"></script>
-<script
+<script>
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
