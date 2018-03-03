@@ -9,7 +9,7 @@ $("#google-login").click(() => {
         // The signed-in user info.
         let user = result.user;
         // ...
-        window.location.assign("../views/index.html");
+        window.location.assign("views/chat.html");
     }).catch(function(error) {
         // Handle Errors here.
         let errorCode = error.code;
@@ -35,5 +35,5 @@ $("#login-email-password").click((event) => {
         console.log("Error message", errorMessage);
         // ...
     });
-    window.location.assign("../views/index.html");
+    window.location.assign("views/chat.html");
 });
