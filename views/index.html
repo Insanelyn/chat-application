@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Code along</title>
-
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css">
+    <script src="../scripts/jquery-3.2.1.min.js" rel="script"></script>
+    <script src="../scripts/bootstrap.min.js" rel="script"></script>
 </head>
 <body>
-<div>
-    <input id="message" type="text">
-    <button id="submit">Submit</button>
-    <section>
-        <article id="messageOutput"></article>
-    </section>
-</div>
-<div>
-    <input id="messageRoom2" type="text">
-    <button id="submitRoom2">Submit</button>
-    <section>
-        <article id="messageOutputRoom2"></article>
-    </section>
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#chatRoom1">Chat Room 1</a></li>
+        <li><a data-toggle="tab" href="#chatRoom2">Chat Room 2</a></li>
+        <li><a data-toggle="tab" href="#chatRoom3">Chat Room 3</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="chatRoom1" class="tab-pane fade in active">
+            <input id="message" type="text">
+            <button id="submit">Submit</button>
+            <section>
+                <article id="messageOutput"></article>
+            </section>
+        </div>
+
+        <div id="chatRoom2" class="tab-pane fade">
+            <input id="messageRoom2" type="text">
+            <button id="submitRoom2">Submit</button>
+            <section>
+                <article id="messageOutputRoom2"></article>
+            </section>
+        </div>
+
+        <div id="chatRoom3" class="tab-pane fade">
+            <input id="messageRoom3" type="text">
+            <button id="submitRoom3">Submit</button>
+            <section>
+                <article id="messageOutputRoom3"></article>
+            </section>
+        </div>
+    </div>
 </div>
 
-<div>
-    <input id="messageRoom3" type="text">
-    <button id="submitRoom3">Submit</button>
-    <section>
-        <article id="messageOutputRoom3"></article>
-    </section>
-</div>
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script src="../scripts/firebaseApp.js"></script>
 <script src="../scripts/index.js"></script>
