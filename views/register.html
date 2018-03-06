@@ -2,32 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register user</title>
+    <title>Login</title>
 
-    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/pagestyle.css">
+    <link rel="stylesheet" href="styles/pagestyle.css">
 
 
-
-
-
-    <script src="../scripts/jquery-3.2.1.min.js" rel="script"></script>
-    <script src="../scripts/bootstrap.min.js" rel="script"></script>
-
-
-
-
+    <script src="scripts/jquery-3.2.1.min.js" rel="script"></script>
+    <script src="scripts/bootstrap.min.js" rel="script"></script>
 </head>
 <body>
-<h3>Create user</h3>
-<form action="">
-    <label for="email">Email</label>
-    <input id="email" type="text">
-    <label for="password">Password</label>
-    <input id="password" type="text">
-    <button id="email-password-create">Create user using email and password</button>
-</form>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form>
+            <h2>Register</h2>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+
+            <button id="email-password-create">Create user</button>
+        </form>
+    </div>
+</div>
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 <script src="../scripts/firebaseApp.js"></script>
 <script
@@ -37,3 +41,22 @@
 <script src="../scripts/register.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
