@@ -1,18 +1,8 @@
-let listRef = new Firebase("https://<url>.firebaseio.com/presence/");
-let userRef = listRef.push();
-
-// Add ourselves to presence list when online.
-let presenceRef = new Firebase("https://<url>.firebaseio.com/.info/connected");
-presenceRef.on("value", function(snap) {
-    if (snap.val()) {
-        // Remove ourselves when we disconnect.
+var amOnline = new Firebase('https://chat-gruppen.firebaseio.com/.info/connected');
+var userRef = new Firebase('https://chat-gruppen.firebaseio.com/presence/' + userid);
+amOnline.on('value', function(snapshot) {
+    if (snapshot.val()) {
         userRef.onDisconnect().remove();
-
         userRef.set(true);
     }
 });
-
-// Number of online users is the number of objects in the presence list.
-listRef.on("value", function(snap) {
-    console.log("# of online users = " + snap.numChildren());
-});  
