@@ -11,11 +11,20 @@
 <body>
 
 <div class="container">
+    <div class="col-md-8">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#chatRoom1">Chat Room 1</a></li>
         <li><a data-toggle="tab" href="#chatRoom2">Chat Room 2</a></li>
         <li><a data-toggle="tab" href="#chatRoom3">Chat Room 3</a></li>
     </ul>
+    </div>
+
+    <div class="col-md-3">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#chatRoom1">Online users</a></li>
+            <li><a data-toggle="tab" href="#chatRoom2">Offline users</a></li>
+        </ul>
+    </div>
 
     <div class="tab-content">
         <div id="chatRoom1" class="tab-pane fade in active">
@@ -23,7 +32,9 @@
                 <article id="messageOutput"></article>
             </section>
             <input id="message" type="text">
+            <div class="">
             <button id="submit">Submit</button>
+                
         </div>
 
         <div id="chatRoom2" class="tab-pane fade">
