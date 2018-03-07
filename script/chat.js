@@ -3,9 +3,9 @@ $(function(){
 
 	var objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
 
-	$('#btnEnviarMsj').click(clickEnvio);
+	$('#btnSend').click(clickEnvio);
 	$('#imgAvatar').attr('src', sessionStorage.getItem('profileImageURL'));
-	$('#txtNombre').val(sessionStorage.getItem('username'));
+	$('#userName').val(sessionStorage.getItem('username'));
 
 	$('#imgAvatar').click(clickSalir);
 
@@ -15,10 +15,10 @@ $(function(){
     }
 
 	function clickEnvio(){
-		var nombre = $('#txtNombre').val();
-		var mensaje = $('#txtMensaje').val();
+		var nombre = $('#userName').val();
+		var mensaje = $('#sendBoxMessage').val();
 
-		$('#txtMensaje').val('');
+		$('#sendBoxMessage').val('');
 
 		objFirebase.push(
 			{
@@ -33,7 +33,7 @@ $(function(){
 	objFirebase.on("child_added", function(snapshot){
 		var values = snapshot.val();
 		var estilo = "";
-		if (values.autor === $('#txtNombre').val()) { estilo = 'me'}
+		if (values.autor === $('#userName').val()) { estilo = 'me'}
 		$('.cont-mensaje-timeline').prepend(getTemplate(values.autor, values.mensaje, estilo, values.image));
 	});
 
