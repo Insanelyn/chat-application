@@ -1,4 +1,5 @@
 Att göra:
+JOHAN- sitter just nu med att försöka mergea alla senaste versioner. Återkom när detta är gjort så att vi alla kan pulla ner rätt version. 
 
 Meddelanden visas just nu nerifrån och upp med det nyaste överst. Det ska enligt instruktionerna vara tvärom. HAMPUS
 
