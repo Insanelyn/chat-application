@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">	
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<title>Firebase Chat</title>
+	<meta charset="UTF-8">
+	<title>Register</title>
 
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-	<script src="script/jquery-3.2.1.min.js" rel="script"></script>
+	<script src="scripts/bootstrap.min.js" rel="script"></script>
+	<script src="../firebaseApp.js"></script>
+	<script src="../jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
 		<form>
-			<h2>Login</h2>
+			<h2>Register</h2>
 
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" placeholder="Email">
-			</div>
-			<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" placeholder="Password">
-			</div>
 
-			<button id="login-email-password">Login</button>
+			<form>
+				<div class="form-group">
+					<label for="name">Full Name</label>
+					<input type="text" class="form-control" id="name" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" class="form-control" id="email" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<label for="username">User name</label>
+					<input type="text" class="form-control" id="username" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" placeholder="Password">
+				</div>
 
-			<h3>Google login</h3>
-			<button id="google-login">Google login</button>
+
+				<button type="submit" class="btn btn-success">Register user</button>
+			</form>
+
 		</form>
 	</div>
 </div>
-
-
-
-
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-<script src="firebaseApp.js"></script>
-<script>
-    src="https://code.jquery.com/jquery-3.3.1.js";
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=";
-    crossorigin="anonymous";
-</script>
-<script src="script/login.js"></script>
+<script></script>
+<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+<script src="../scripts/login.js"></script>
 </body>
 </html>
