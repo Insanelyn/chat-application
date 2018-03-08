@@ -1,24 +1,24 @@
-Att göra:
+Att gÃ¶ra:
 
-Meddelanden visas just nu nerifrån och upp med det nyaste överst. Det ska enligt instruktionerna vara tvärom.
+Meddelanden visas just nu nerifrÃ¥n och upp med det nyaste Ã¶verst. Det ska enligt instruktionerna vara tvÃ¤rom. HAMPUS
 
-Onlinelista finns inte
+Onlinelista finns inte MATILDA + VERONIKA
 
-3 Chatrum bnehöver läggas in
+3 Chatrum bnehÃ¶ver lÃ¤ggas in JOHAN
 
-Timestamps behöver finnas på meddelanden
+Timestamps behÃ¶ver finnas pÃ¥ meddelanden- MATILDA + VERONIKA
 
-Registeringssida finns ej, behöver skapas - Evelyn fixar
+Registeringssida finns ej, behÃ¶ver skapas - EVELYN
 
-Registeringssida ska kopplas
+Registeringssida ska kopplas- EVELYN
 
-Stylingen måste fixas 
+Stylingen mÃ¥ste fixas 
 
-Måste laddas upp på Github Pages
+MÃ¥ste laddas upp pÃ¥ Github Pages
 
-Log out funktion behöver adderas
+Log out funktion behÃ¶ver adderas
 
-Just nu går det att logga in utan uppgifter, Det måste fixas
+Just nu gÃ¥r det att logga in utan uppgifter, Det mÃ¥ste fixas
 
-Den inloggade användaren ska synas längst upp till höger i hörnet
+Den inloggade anvÃ¤ndaren ska synas lÃ¤ngst upp till hÃ¶ger i hÃ¶rnet
 
