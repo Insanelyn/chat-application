@@ -1,103 +1,53 @@
-let db = firebase.database();
 
-let message = document.getElementById("message");
-let button = document.getElementById("submit");
-let output = document.getElementById("messageOutput");
-let header = document.createElement("h2");
-header.innerText = "Chat room 1";
-let child = document.createElement("p");
+$(function(){
 
-button.addEventListener('click', function() {
-    let currentDate = new Date();
-    let date = currentDate.toLocaleDateString();
-    let time = currentDate.toLocaleTimeString();
+	var objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
 
-    db.ref('/messages').push({
-        message: message.value,
-        timeStamp: `${date} ${time}`
-    });
-    let messages = db.ref('/messages');
-    output.innerHTML = "";
-    messages.on('value', function(snapshot) {
-        for(let message of Object.values(snapshot.val())) {
-            child.innerHTML += `
-            <div>${message.message}</div>
-            <div>${message.timeStamp}</div>
-        `;
-        }
-        output.appendChild(header);
-        output.appendChild(child);
-    });
-    message.value = "";
-});
+	$('#btnSend').click(clickEnvio);
+	$('#imgAvatar').attr('src', sessionStorage.getItem('profileImageURL'));
+	$('#userName').val(sessionStorage.getItem('username'));
 
-/// Chat room 2
+	$('#imgAvatar').click(clickSalir);
 
-let dbRoom2 = firebase.database();
+    function clickSalir(){
+    	sessionStorage.removeItem('token');
+    	window.location.href = "../index.html";
+    }
 
-let messageRoom2 = document.getElementById("messageRoom2");
-let buttonRoom2 = document.getElementById("submitRoom2");
-let outputRoom2 = document.getElementById("messageOutputRoom2");
-let headerRoom2 = document.createElement("h2");
-headerRoom2.innerText = "Chat room 2";
-let childRoom2 = document.createElement("p");
+	function clickEnvio(){
+		var nombre = $('#userName').val();
+		var mensaje = $('#sendBoxMessage').val();
 
-buttonRoom2.addEventListener('click', function() {
-    let currentDate = new Date();
-    let date = currentDate.toLocaleDateString();
-    let time = currentDate.toLocaleTimeString();
+		$('#sendBoxMessage').val('');
 
-    dbRoom2.ref('/messagesRoom2').push({
-        message: messageRoom2.value,
-        timeStamp: `${date} ${time}`
-    });
-    let messages = dbRoom2.ref('/messagesRoom2');
-    outputRoom2.innerHTML = "";
-    messages.on('value', function(snapshot) {
-        for(let message of Object.values(snapshot.val())) {
-            childRoom2.innerHTML += `
-            <div>${message.message}</div>
-            <div>${message.timeStamp}</div>
-        `;
-        }
-        outputRoom2.appendChild(headerRoom2);
-        outputRoom2.appendChild(childRoom2);
-    });
-    message2.value = "";
-});
+		objFirebase.push(
+			{
+  				autor: nombre,
+    			mensaje: mensaje,
+    			image: sessionStorage.getItem('profileImageURL')
+  			}
+		);
 
+	}
 
-///// Chat room 3
+	objFirebase.on("child_added", function(snapshot){
+		var values = snapshot.val();
+		var estilo = "";
+		if (values.autor === $('#userName').val()) { estilo = 'me'}
+		$('.cont-mensaje-timeline').prepend(getTemplate(values.autor, values.mensaje, estilo, values.image));
+	});
 
-let dbChatRoom3 = firebase.database();
+	function getTemplate(autor, mensaje, estilo, imagen){
+		var plantilla = '<div class="msg ' +
+               estilo +
+               '">' +
+               '<figure class"imgChat"> <img id="imgChatAvatar" src="'+ imagen +
+               '" alt="Avatar"></figure>' +
+               '<b>' + autor + '</b>' +
+               '<p>' + mensaje + '</p>' +
+               '</div>';
 
-let messageChatRoom3 = document.getElementById("messageRoom3");
-let buttonChatRoom3 = document.getElementById("submitRoom3");
-let outputChatRoom3 = document.getElementById("messageOutputRoom3");
-let headerChatRoom3 = document.createElement("h2");
-headerChatRoom3.innerText = "Chat room 3";
-let childChatRoom3 = document.createElement("p");
+		return plantilla;
+	}
 
-buttonChatRoom3.addEventListener('click', function() {
-    let currentDate = new Date();
-    let date = currentDate.toLocaleDateString();
-    let time = currentDate.toLocaleTimeString();
-
-    dbChatRoom3.ref('/messagesRoom3').push({
-        message: messageChatRoom3.value,
-        timeStamp: `${date} ${time}`
-    });
-    let messages = dbChatRoom3.ref('/messagesRoom3');
-    outputChatRoom3.innerHTML = "";
-    messages.on('value', function(snapshot) {
-        for(let message of Object.values(snapshot.val())) {
-            childChatRoom3.innerHTML += `
-            <div>${message.message}</div>
-            <div>${message.timeStamp}</div>
-        `;
-        }
-        outputChatRoom3.appendChild(headerChatRoom3);
-        outputChatRoom3.appendChild(childChatRoom3);
-    });
-    messageChatRoom3.value = "";
 });

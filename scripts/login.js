@@ -1,39 +1,39 @@
 
 
-let provider = new firebase.auth.GoogleAuthProvider();
+var provider = new firebase.auth.GoogleAuthProvider();
 
 $("#google-login").click(() => {
     firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        let token = result.credential.accessToken;
-        // The signed-in user info.
-        let user = result.user;
-        // ...
-        window.location.assign("views/chat.html");
-    }).catch(function(error) {
-        // Handle Errors here.
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        // The email of the user's account used.
-        let email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        let credential = error.credential;
-        // ...
-    });
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+    window.location.assign("views/chat.html");
+}).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+});
 });
 
 $("#login-email-password").click((event) => {
     event.preventDefault();
-    let email = $("#email").val();
-    let password = $("#password").val();
+var email = $("#email").val();
+var password = $("#password").val();
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        let errorCode = error.code;
-        console.log("Error code", errorCode);
-        let errorMessage = error.message;
-        console.log("Error message", errorMessage);
-        // ...
-    });
-    window.location.assign("views/chat.html");
+firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    console.log("Error code", errorCode);
+    var errorMessage = error.message;
+    console.log("Error message", errorMessage);
+    // ...
+});
+window.location.assign("views/chat.html")
 });
