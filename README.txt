@@ -9,7 +9,7 @@ Onlinelista finns inte MATILDA + VERONIKA
 
 Timestamps behöver finnas på meddelanden- MATILDA + VERONIKA
 
-Registeringssida finns ej, behöver skapas - EVELYN
+Registeringssida finn, behöver bara korrigeras - EVELYN
 
 Registeringssida ska kopplas- EVELYN
 
