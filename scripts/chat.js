@@ -34,11 +34,11 @@ $(function(){
 		var values = snapshot.val();
 		var estilo = "";
 		if (values.autor === $('#userName').val()) { estilo = 'me'}
-		$('.cont-mensaje-timeline').prepend(getTemplate(values.autor, values.mensaje, estilo, values.image));
+		$('.boxMessageTimeline').prepend(getTemplate(values.autor, values.mensaje, estilo, values.image));
 	});
 
 	function getTemplate(autor, mensaje, estilo, imagen){
-		var plantilla = '<div class="msg ' +
+		var plantilla = '<div role="alert" class="alert alert-info ' +
                estilo +
                '">' +
                '<figure class"imgChat"> <img id="imgChatAvatar" src="'+ imagen +
