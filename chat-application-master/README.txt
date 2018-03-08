@@ -1,0 +1,24 @@
+Att göra:
+JOHAN- sitter just nu med att försöka mergea alla senaste versioner. Återkom när detta är gjort så att vi alla kan pulla ner rätt version. 
+
+Meddelanden visas just nu nerifrån och upp med det nyaste överst. Det ska enligt instruktionerna vara tvärom. HAMPUS
+
+Onlinelista finns inte MATILDA + VERONIKA
+
+3 Chatrum bnehöver läggas in JOHAN
+
+Timestamps behöver finnas på meddelanden- MATILDA + VERONIKA
+
+Registeringssida finn, behöver bara korrigeras - EVELYN
+
+Registeringssida ska kopplas- EVELYN
+
+Stylingen måste fixas 
+
+Måste laddas upp på Github Pages
+
+Log out funktion behöver adderas
+
+Just nu går det att logga in utan uppgifter, Det måste fixas
+
+Den inloggade användaren ska synas längst upp till höger i hörnet
