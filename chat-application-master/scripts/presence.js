@@ -23,7 +23,7 @@ gathering.join(firebase.auth().currentUser.uid);
 
 // Also can set a display name (along with or without unique id)
 gathering.join(null, 'Superman');
-gathering.join(firebase.auth().currentUser.uid, 'Superman');
+gathering.join(firebase.auth().currentUser.uid, );
 
 
 // When I am finished with the gathering, I may leave
@@ -32,3 +32,15 @@ gathering.leave();
 
 // When all user's have left, or the meetup is over, we can remove the gathering
 gathering.over();
+
+let gathering = new Gathering(firebase.database(), 'Gathering Name');
+
+// Attach a callback function to track updates
+// That function will be called (with the user count and array of users) every time user list updated
+gathering.onUpdated(function(count, users) {
+    console.log(gathering.roomName + ' have '+ count +' members.');
+    console.log('Here is the updated users list -');
+    for(var i in users) {
+        console.log(users[i] + '(id: '+ i + ')');
+    }
+})
