@@ -1,12 +1,17 @@
 
 
-// KODSNUTTEN VI BEHÖVER
+// KODSNUTTEN VI BEHÖVER -- Detta visar endast för användaren att du är inloggad.
+let users = JSON.parse(localStorage.getItem("users")) || [];
 let body = document.getElementsByTagName("body")[0];
-let loggedIn = document.getElementById("usersOnline");
+let loggedIn = document.createElement("div");
 let loggedInHeader = document.createElement("h3");
 loggedInHeader.innerHTML = "Logged in users";
-loggedIn.innerHTML = sessionStorage.getItem("loggedIn");
 body.appendChild(loggedInHeader);
+for (let user of users ){
+	let loggedInUser = document.createElement("p");
+	loggedInUser.innerHTML = user.email;
+	loggedIn.appendChild(loggedInUser);
+}
 body.appendChild(loggedIn);
 
 $(function(){
