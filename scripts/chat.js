@@ -3,7 +3,7 @@ $(function(){
 
 	var objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
 
-	$('#btnSend').click(clickEnvio);
+	$('#btnSend').click(clickShipping);
 	$('#imgAvatar').attr('src', sessionStorage.getItem('profileImageURL'));
 	$('#userName').val(sessionStorage.getItem('username'));
 
@@ -14,16 +14,16 @@ $(function(){
     	window.location.href = "../index.html";
     }
 
-	function clickEnvio(){
-		var nombre = $('#userName').val();
-		var mensaje = $('#sendBoxMessage').val();
+	function clickShipping(){
+		var name = $('#userName').val();
+		var message = $('#sendBoxMessage').val();
 
 		$('#sendBoxMessage').val('');
 
 		objFirebase.push(
 			{
-  				autor: nombre,
-    			mensaje: mensaje,
+  				autor: name,
+    			message: message,
     			image: sessionStorage.getItem('profileImageURL')
   			}
 		);
@@ -32,22 +32,22 @@ $(function(){
 
 	objFirebase.on("child_added", function(snapshot){
 		var values = snapshot.val();
-		var estilo = "";
-		if (values.autor === $('#userName').val()) { estilo = 'me'}
-		$('.boxMessageTimeline').prepend(getTemplate(values.autor, values.mensaje, estilo, values.image));
+		var style = "";
+		if (values.autor === $('#userName').val()) { style = 'me'}
+		$('.boxMessageTimeline').prepend(getTemplate(values.autor, values.message, style, values.image));
 	});
 
-	function getTemplate(autor, mensaje, estilo, imagen){
-		var plantilla = '<div role="alert" class="alert alert-info ' +
-               estilo +
+	function getTemplate(autor, message, style, imagen){
+		var template = '<div role="alert" class="alert alert-info ' +
+               style +
                '">' +
                '<figure class"imgChat"> <img id="imgChatAvatar" src="'+ imagen +
                '" alt="Avatar"></figure>' +
                '<b>' + autor + '</b>' +
-               '<p>' + mensaje + '</p>' +
+               '<p>' + message + '</p>' +
                '</div>';
 
-		return plantilla;
+		return template;
 	}
 
 });
