@@ -1,0 +1,120 @@
+body .container .boxMessageTimeline{
+    display:flex;
+    flex-direction: column-reverse;
+    height:450px;
+    margin:0 auto;
+    padding:.5em;
+    overflow:auto;
+    width:60%;
+}
+body .container .boxMessageTimeline  {
+    content:normal;
+
+}
+
+body .container .cont-send {
+    margin:0 auto;
+    padding:1em;
+    text-align:center;
+    width:100%;
+}
+
+body .container .cont-send .txtMessage{
+    font-weight:bold;
+    width:400px;
+}
+
+body .container .cont-send .txtName{
+    font-weight:bold;
+    width:200px;
+}
+
+body footer{
+    background:#DAEDF7;
+    border-top-style: solid;
+    border-top-width:4px ;
+    border-top-color: darkgrey;
+    color:#fff;
+    text-align:center;
+    padding:.8em 0;
+    margin-top: 30px;
+}
+
+body footer h3{
+    font-size:14px;
+    font-weight:normal;
+}
+
+body header{
+    background:#DAEDF7;
+    border-bottom-color: darkgrey;
+    border-bottom-style: solid;
+    border-bottom-width:4px ;
+    color:#fff;
+    overflow:hidden;
+    position:relative;
+}
+
+body > aside
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+
+#chat1
+{
+    border-bottom-style: solid;
+    border-color: #DAEDF7;
+    border-radius: 5px;
+    width: 150px;
+}
+
+#regBtn
+{
+    background-color: #DAEDF7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#goToLogin
+{
+    background-color: #DAEDF7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+#usersOnline
+{
+    border-bottom-style: solid;
+    border-color: #DAEDF7;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#login-email-password
+{
+    background-color: #DAEDF7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+#google-login
+{
+    background-color: #DAEDF7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+#registerHere
+{
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
