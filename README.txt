@@ -1,24 +1,23 @@
-Att göra:
-JOHAN- sitter just nu med att försöka mergea alla senaste versioner. Återkom när detta är gjort så att vi alla kan pulla ner rätt version. 
+﻿Att göra:
 
+Login page måste prata med firebase att användare finns eller ej.
+
+Chat page så ska en lista av dom som är online finnas
+
+Chat page ska det finnas tre chat rum
+
+Chat page ska det finnas en logout knapp som säger till firebase att den loggar ut och går vidare till Login page.
+
+Reg page tar just nu emot email och lösen men inte användare och namn.
+
+
+
+	------------	----------------	--------------		-------------
 Meddelanden visas just nu nerifrån och upp med det nyaste överst. Det ska enligt instruktionerna vara tvärom. HAMPUS
-
-Onlinelista finns inte MATILDA + VERONIKA
-
-3 Chatrum bnehöver läggas in JOHAN
-
-Timestamps behöver finnas på meddelanden- MATILDA + VERONIKA
-
+Klart!
 Registeringssida finn, behöver bara korrigeras - EVELYN
-
+Klart!
 Registeringssida ska kopplas- EVELYN
-
+Klart!
 Stylingen måste fixas 
-
-Måste laddas upp på Github Pages
-
-Log out funktion behöver adderas
-
-Just nu går det att logga in utan uppgifter, Det måste fixas
-
-Den inloggade användaren ska synas längst upp till höger i hörnet
+Klart!
