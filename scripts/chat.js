@@ -1,7 +1,17 @@
 
+
+// KODSNUTTEN VI BEHÖVER
+let body = document.getElementsByTagName("body")[0];
+let loggedIn = document.getElementById("usersOnline");
+let loggedInHeader = document.createElement("h3");
+loggedInHeader.innerHTML = "Logged in users";
+loggedIn.innerHTML = sessionStorage.getItem("loggedIn");
+body.appendChild(loggedInHeader);
+body.appendChild(loggedIn);
+
 $(function(){
 
-	var objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
+	let objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
 	let isOnline = sessionStorage.getItem("isOnline");
 	if(isOnline === "isOnline") {
 		//list user in users online field
