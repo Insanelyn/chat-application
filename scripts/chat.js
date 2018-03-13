@@ -2,7 +2,11 @@
 $(function(){
 
 	var objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
-
+	let isOnline = sessionStorage.getItem("isOnline");
+	if(isOnline === "isOnline") {
+		//list user in users online field
+	}
+	console.log("is online", isOnline)
 	$('#btnSend').click(clickShipping);
 	$('#imgAvatar').attr('src', sessionStorage.getItem('profileImageURL'));
 	$('#userName').val(sessionStorage.getItem('username'));
@@ -37,11 +41,11 @@ $(function(){
 		$('.boxMessageTimeline').prepend(getTemplate(values.autor, values.message, style, values.image));
 	});
 
-	function getTemplate(autor, message, style, imagen){
+	function getTemplate(autor, message, style, image){
 		var template = '<div role="alert" class="alert alert-info ' +
                style +
                '">' +
-               '<figure class"imgChat"> <img id="imgChatAvatar" src="'+ imagen +
+               '<figure class"imgChat"> <img id="imgChatAvatar" src="../images/userPic.jpg'+ image +
                '" alt="Avatar"></figure>' +
                '<b>' + autor + '</b>' +
                '<p>' + message + '</p>' +
