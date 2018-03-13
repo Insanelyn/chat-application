@@ -28,9 +28,11 @@ body{
     background:#e8e8e8;
     font-family:Arial;
     font-size:16px;
+
 }
 body .container .boxMessageTimeline{
-    display:block;
+    display:flex;
+    flex-direction: column-reverse;
     height:450px;
     margin:0 auto;
     padding:.5em;
@@ -39,7 +41,8 @@ body .container .boxMessageTimeline{
 
 }
 body .container .boxMessageTimeline a{
-    color:#dd4f24
+    color:#dd4f24;
+
 }
 body .container .boxMessageTimeline .cont-mensaje{
     background:#fff;
@@ -184,3 +187,4 @@ body nav .menu-chat li a{
 body nav .menu-chat li a:hover{
     background:rgba(0,0,0,0.1);
 }
+
