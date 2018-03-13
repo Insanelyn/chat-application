@@ -1,4 +1,4 @@
-// Initialize Firebase
+/*// Initialize Firebase
 let config = {
     apiKey: "AIzaSyBqLrTAg2dKXC35Kn4LDs9WGimE2AXjN0E",
     authDomain: "chat-gruppen.firebaseapp.com",
@@ -7,8 +7,9 @@ let config = {
     storageBucket: "chat-gruppen.appspot.com",
     messagingSenderId: "485397090215"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(config);*/
 
+/*
 let gathering = new Gathering(firebase.database(), 'Chat1');
 
 // default/global gathering
@@ -33,7 +34,7 @@ gathering.leave();
 // When all user's have left, or the meetup is over, we can remove the gathering
 gathering.over();
 
-let gathering = new Gathering(firebase.database(), 'Gathering Name');
+//let gathering = new Gathering(firebase.database(), 'Gathering Name');
 
 // Attach a callback function to track updates
 // That function will be called (with the user count and array of users) every time user list updated
@@ -44,14 +45,18 @@ gathering.onUpdated(function(count, users) {
         console.log(users[i] + '(id: '+ i + ')');
     }
 })
+*/
+let user = firebase.auth();
+console.log("logged in user", user.currentUser)
 
 // Nedan är från Firabase blog. Nu måste vi speca HUR det ska visas i webbläsaren?
-var amOnline = new Firebase('https://chat-gruppen.firebaseio.com/.info/connected');
-var userRef = new Firebase('https://chat-gruppen.firebaseio.com/presence/' + userid);
+/*
+let amOnline = new Firebase('https://chat-gruppen.firebaseio.com/.info/connected');
+let userRef = new Firebase('https://chat-gruppen.firebaseio.com/presence/' + user.uuid);
 amOnline.on('value', function(snapshot) {
     if (snapshot.val()) {
+        console.log("presence file", snapshot.val())
         userRef.onDisconnect().remove();
         userRef.set(true);
     }
-});
-
+});*/

@@ -6,6 +6,12 @@ var email = $("#email").val();
 var password = $("#password").val();
 
 firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(() => {
+        let currentUser = firebase.auth().currentUser;
+        console.log(currentUser)
+        sessionStorage.setItem("is online", currentUser.email);
+        window.location.assign("views/chat.html");
+    })
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -28,5 +34,5 @@ firebase.auth().signInWithEmailAndPassword(email, password)
         console.log(error);
 
     });
-window.location.assign("views/chat.html");
-})
+});
+
