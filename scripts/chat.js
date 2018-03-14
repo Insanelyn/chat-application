@@ -5,7 +5,7 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 let body = document.getElementsByTagName("body")[0];
 let loggedIn = document.createElement("div");
 let loggedInHeader = document.createElement("h3");
-loggedInHeader.innerHTML = "Logged in users";
+loggedInHeader.innerHTML = "Users";
 body.appendChild(loggedInHeader);
 for (let user of users ){
 	let loggedInUser = document.createElement("p");
