@@ -9,7 +9,6 @@ loggedInHeader.innerHTML = "Users";
 loggedInHeader.setAttribute("id", "loggedInHeader");
 body.appendChild(loggedInHeader);
 
-
 for (let user of users ){
 	let loggedInUser = document.createElement("p");
 	loggedIn.setAttribute("id", "loggedIn")
@@ -23,7 +22,7 @@ body.appendChild(loggedIn);
 
 $(function(){
 
-	let objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/messages");
+	let objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
 	let isOnline = sessionStorage.getItem("isOnline");
 	if(isOnline === "isOnline") {
 		//list user in users online field
