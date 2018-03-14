@@ -16,4 +16,5 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
         }
         console.log(error);
     });
+    
 });
