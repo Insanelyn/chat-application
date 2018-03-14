@@ -13,6 +13,9 @@ firebase.auth().signInWithEmailAndPassword(email, password)
         localStorage.setItem('users', JSON.stringify(users));
         window.location.assign("views/chat.html");
 })
+
+
+    
 .catch(function(error) {
     // Handle Errors here.
     let errorCode = error.code;
@@ -36,6 +39,7 @@ firebase.auth().signInWithEmailAndPassword(email, password)
 
 });
 });
+
 
 /*
 $("#login-email-password").click((event) => {
