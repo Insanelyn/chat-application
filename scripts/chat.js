@@ -62,14 +62,23 @@ $(function(){
 		$('.boxMessageTimeline').prepend(getTemplate(values.author, values.message, style, values.image));
 	});
 
-	function getTemplate(author, message, style, image){
-		let template = '<div role="alert" class="alert alert-info ' +
+
+    function getTemplate(author, message, style, image){
+        let timestamp1 = new Date().getUTCDate()
+
+        let timestamp2 = new Date().getHours()
+
+        let timestamp3 = new Date().getUTCMinutes()
+
+        let template = '<div role="alert" class="alert alert-info ' +
                style +
                '">' +
                '<img id="imgChatAvatar" src="http://simpleicon.com/wp-content/uploads/user1.svg" height="30px" width="30px" ='+ image
                 +
                '<b>' + author + '</b>' +
-               '<p>' + message + '</p>' +
+            '<p>' +"March"+" " + timestamp1+ " " + timestamp2+ ":" + timestamp3 + '</p>' +
+
+            '<p>' + message + '</p>' +
                '</div>';
 
 		return template;

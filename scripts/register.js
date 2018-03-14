@@ -7,8 +7,8 @@ let password = $("#password").val();
 firebase.auth().createUserWithEmailAndPassword(email, password)
     .catch(function(error) {
         // Handle Errors here.
-        let errorCode = error.code;
-        let errorMessage = error.message;
+        var errorCode = error.code;
+        var errorMessage = error.message;
         if (errorCode == 'auth/weak-password') {
             alert('The password is too weak.');
         } else {
@@ -16,6 +16,7 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
         }
         console.log(error);
     })
+    
+    })
 });
-$("#formReg").trigger('reset');
 
