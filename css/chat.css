@@ -57,12 +57,22 @@ body header{
     position:relative;
 }
 
-body > aside
+#matilda
+{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-right: 60px;
+
+}
+
+/*#loggedInHeader
 {
     display: flex;
     justify-content: flex-end;
     margin-right: 60px;
-}
+
+}*/
 
 #chat1
 {

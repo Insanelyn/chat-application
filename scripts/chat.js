@@ -3,12 +3,14 @@
 // KODSNUTTEN VI BEHÖVER -- Detta visar endast för användaren att du är inloggad.
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let body = document.getElementsByTagName("body")[0];
-let loggedIn = document.createElement("div");
+let loggedIn = document.getElementById("matilda");
 let loggedInHeader = document.createElement("h3");
 loggedInHeader.innerHTML = "Users";
+loggedInHeader.setAttribute("id", "loggedInHeader");
 body.appendChild(loggedInHeader);
 for (let user of users ){
 	let loggedInUser = document.createElement("p");
+	loggedIn.setAttribute("id", "loggedIn")
 	loggedInUser.innerHTML = user.email;
 	loggedIn.appendChild(loggedInUser);
 }
