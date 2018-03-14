@@ -28,10 +28,8 @@ $(function(){
 	}
 	console.log("is online", isOnline)
 	$('#btnSend').click(clickShipping);
-	// $('#imgAvatar').attr('src', sessionStorage.getItem('profileImageURL'));
 	$('#userName').val(sessionStorage.getItem('username'));
 
-	// $('#imgAvatar').click(clickSalir);
 
     function clickSalir(){
     	sessionStorage.removeItem('token');

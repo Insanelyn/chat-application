@@ -9,9 +9,6 @@ body .container .boxMessageTimeline{
 }
 body .container .boxMessageTimeline  {
     content:normal;
-
-
-    ;
 }
 
 body .container .cont-send {
@@ -41,9 +38,6 @@ body .container .boxMessageTimeline2 {
 }
 body .container .boxMessageTimeline2  {
     content:normal;
-
-
-;
 }
 
 body .container .cont-send2 {
@@ -74,7 +68,7 @@ body footer{
     margin-top: 30px;
 }
 
-body footer h3{
+body footer h2{
     font-size:14px;
     font-weight:normal;
 }
@@ -89,22 +83,6 @@ body header{
     position:relative;
 }
 
-#matilda
-{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-right: 60px;
-
-}
-
-/*#loggedInHeader
-{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 60px;
-
-}*/
 
 #chat1
 {
@@ -163,3 +141,15 @@ body header{
     margin-top: 30px;
 }
 
+h3{
+    background-color: white;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+#loggedIn{
+    position: absolute;
+    right: 100px;
+    top: 150px;
+}

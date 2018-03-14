@@ -41,20 +41,6 @@ firebase.auth().signInWithEmailAndPassword(email, password)
 });
 
 
-/*
-$("#login-email-password").click((event) => {
-    event.preventDefault();
-var email = $("#email").val();
-var password = $("#password").val();
-
-firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(() => {
-        let currentUser = firebase.auth().currentUser;
-        console.log(currentUser)
-        sessionStorage.setItem("is online", currentUser.email);
-        window.location.assign("views/chat.html");
-    })
-    */
   
 
 
