@@ -30,6 +30,38 @@ body .container .cont-send .txtName{
     font-weight:bold;
     width:200px;
 }
+body .container .boxMessageTimeline2 {
+    display:flex;
+    flex-direction: column-reverse;
+    height:450px;
+    margin:0 auto;
+    padding:.5em;
+    overflow:auto;
+    width:60%;
+}
+body .container .boxMessageTimeline2  {
+    content:normal;
+
+
+;
+}
+
+body .container .cont-send2 {
+    margin:0 auto;
+    padding:1em;
+    text-align:center;
+    width:100%;
+}
+
+body .container .cont-send2 .txtMessage2{
+    font-weight:bold;
+    width:400px;
+}
+
+body .container .cont-send2 .txtName2{
+    font-weight:bold;
+    width:200px;
+}
 
 body footer{
     background:#DAEDF7;

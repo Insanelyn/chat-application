@@ -22,7 +22,7 @@ body.appendChild(loggedIn);
 
 $(function(){
 
-	let objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/");
+	let objFirebase = new Firebase("https://chat-gruppen.firebaseio.com/messages");
 	let isOnline = sessionStorage.getItem("isOnline");
 	if(isOnline === "isOnline") {
 		//list user in users online field
