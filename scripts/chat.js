@@ -1,5 +1,4 @@
 
-
 // KODSNUTTEN VI BEHÖVER -- Detta visar endast för användaren att du är inloggad.
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let body = document.getElementsByTagName("body")[0];
