@@ -1,0 +1,45 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 15px;
+}
+
+.tile {
+  height: 50px;
+  width: 50px;
+  transition: color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: transparent;
+  cursor: pointer;
+}
+
+.tile.plr1 {
+  background-color: powderblue;
+  color: mediumslateblue;
+}
+
+.tile.plr2 {
+  background-color: peachpuff;
+  color: palevioletred;
+}
+
+.tile.line {
+  color: gold;
+  text-shadow: 0 0 5px black;
+}
